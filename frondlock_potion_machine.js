@@ -30,11 +30,15 @@ function getValeur(){
   var valeur = Math.floor(Math.random() * (25 - 5 + 1)) + 5;
   return valeur;
 }
-function getTemps(){
+function getTemps(temps){
   var index = Math.floor(Math.random()*rpg_data.durees.length)
   var duree = rpg_data.durees[index];
   var temps = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-  return duree + temps;
+  /*gestion du singulier pluriel !*/
+  if (temps > 1){
+    var duree = duree + "s";
+  }
+  return temps + " " + duree;
 }
 
 // mon générateur de potion
@@ -46,8 +50,8 @@ function generateFrondlockPotion() {
     var temps = getTemps();
 
     var potion = "Une potion de " + carac + " " + niveau + " de couleur " + couleur + ". ";
-    var effet = "<p><strong>Effet :</strong> Bonus de " + valeur + " de " + carac + ".</p>" ;
-    var resultat = potion + effet ;
+    var effet = "<p><strong>Effet :</strong> Bonus de " + valeur + " de " + carac ;
+    var resultat = potion + effet + " pendant " + temps + "." ;
     return resultat;
 }
 
