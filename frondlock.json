@@ -1,5 +1,11 @@
 {
     "data": {
+        "durees":[
+          "jours",
+          "tours",
+          "heures",
+          "minutes"
+        ],
         "caracteristics": [
             "charisme",
             "constitution",
