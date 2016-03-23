@@ -26,8 +26,13 @@ function getCouleur(){
   var couleur = rpg_data.couleurs[index];
   return couleur;
 }
+function getEffets(){
+  var index = Math.floor(Math.random()*rpg_data.effets.length)
+  var effets = rpg_data.effets[index];
+  return effets;
+}
 function getValeur(){
-  var valeur = Math.floor(Math.random() * (25 - 5 + 1)) + 5;
+  var valeur = Math.floor(Math.random() * (25 - 1 + 1)) + 1;
   return valeur;
 }
 function getTemps(temps){
@@ -48,9 +53,10 @@ function generateFrondlockPotion() {
     var carac = getCaracteristic();
     var valeur = getValeur();
     var temps = getTemps();
+    var effets = getEffets();
 
     var potion = "Une potion de " + carac + " " + niveau + " de couleur " + couleur + ". ";
-    var effet = "<p><strong>Effet :</strong> Bonus de " + valeur + " de " + carac ;
+    var effet = "<p><strong>Effet :</strong> " + effets + " de " + valeur + " de " + carac ;
     var resultat = potion + effet + " pendant " + temps + "." ;
     return resultat;
 }

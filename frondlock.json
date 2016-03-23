@@ -6,13 +6,17 @@
             "heure",
             "minute"
         ],
+        "effets": [
+          "Bonus",
+          "Malus"
+        ],
         "caracteristics": [
             "charisme",
             "constitution",
-            "defense",
-            "defense magique",
-            "degats",
-            "dexterite",
+            "défense",
+            "défense magique",
+            "dégâts",
+            "dexterité",
             "force",
             "intelligence",
             "sagesse"
