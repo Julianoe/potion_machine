@@ -1,0 +1,21 @@
+{
+    "data": {
+        "caracteristics": [
+            "charisme",
+            "constitution",
+            "defense",
+            "defense magique",
+            "degats",
+            "dexterite",
+            "force",
+            "intelligence",
+            "sagesse"
+        ]
+    },
+    "meta": {
+        "author": "Julianoe",
+        "generator": "https://github.com/jrigden/Seeds_of_Infinity",
+        "license": "http://unlicense.org",
+        "title": "Frondlock"
+    }
+}

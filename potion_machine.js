@@ -5,13 +5,20 @@ rpg_data = {};
 function loadData() {
     //https://rpg.rigden.us/seeds_of_infinity/resources/json/all.json
     //all.json
-    $.getJSON("https://rpg.rigden.us/seeds_of_infinity/resources/json/all.json", function(json_response) {
+    $.getJSON("frondlock.json", function(json_response) {
         rpg_data = json_response.data;
-        setModeDeluxePotion()
+        // setModeDeluxePotion()
+        setModeBasicPotion()
     });
 }
 
+function getCaracteristic() {
+  var index = Math.floor(Math.random()*rpg_data.caracteristics.length)
+  var caracteristic = rpg_data.caracteristics[index];
+  return caracteristic;
+}
 
+// fonctions faisant appel aux données du fichier JSON
 function getAlignment() {
     var index = Math.floor(Math.random()*rpg_data.alignments.length)
     var alignment = rpg_data.alignments[index];
@@ -53,8 +60,9 @@ function getTrait() {
     var trait = rpg_data.traits[index];
     return trait;
 }
+// ----- fin des appels aux fichiers JSON
 
-
+// calcul des possibilités
 function getNumberOfBasicPotions() {
     combinations = rpg_data.colors.length * rpg_data.liquid_types.length * rpg_data.smells.length
     return combinations
