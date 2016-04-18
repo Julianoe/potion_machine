@@ -11,10 +11,10 @@ function loadData() {
 
 
 // mes fonctions d'appel au JSON
-function getCaracteristic() {
-  var index = Math.floor(Math.random()*rpg_data.caracteristics.length)
-  var caracteristic = rpg_data.caracteristics[index];
-  return caracteristic;
+function getCaracteristique() {
+  var index = Math.floor(Math.random()*rpg_data.caracteristiques.length)
+  var caracteristique = rpg_data.caracteristiques[index];
+  return caracteristique;
 }
 function getNiveau(){
   var index = Math.floor(Math.random()*rpg_data.niveaux.length)
@@ -24,21 +24,21 @@ function getNiveau(){
 
 
 function getPuissance(){
-  var niveauxarray = ["mythique","puissante","majeure","intermediaire","standard","faible","minime"]
-  var poidsarray = [5, 10, 15, 20, 20, 15, 15]
+  var niveau = ["mythique","puissante","majeure","intermediaire","standard","faible","minime"]
+  var raretee = [5, 10, 15, 20, 20, 15, 15]
 
-  var totalpoids=eval(poidsarray.join("+")) //get total weight (in this case, 100)
-  var niveaupoids=new Array() //new array to hold "weighted" niveaux
+  var totalraretee=eval(raretee.join("+")) //get total weight
+  var puissance=new Array() //new array to hold "weighted" niveaux
   var currentpuissance=0
 
-  while (currentpuissance<niveauxarray.length){ //step through each fruit[] element
-      for (i=0; i<poidsarray[currentpuissance]; i++)
-          niveaupoids[niveaupoids.length]=niveauxarray[currentpuissance]
+  while (currentpuissance<niveau.length){ //step through each niveau[] element
+      for (i=0; i<raretee[currentpuissance]; i++)
+          puissance[puissance.length]=niveau[currentpuissance]
       currentpuissance++
   }
-  var randomnumber=Math.floor(Math.random()*totalpoids)
+  var randomnumber=Math.floor(Math.random()*totalraretee)
 
-  return niveaupoids[randomnumber];
+  return puissance[randomnumber];
 }
 
 
@@ -53,9 +53,10 @@ function getEffets(){
   var effets = rpg_data.effets[index];
   return effets;
 }
-function getValeur(){
-  var valeur = Math.floor(Math.random() * (25 - 1 + 1)) + 1;
-  return valeur;
+// génère un chiffre aléatoirement entre 25 et 1
+function getValeurSimple(){
+  var valeursimple = Math.floor(Math.random() * (25 - 1 + 1)) + 1;
+  return valeursimple;
 }
 function getTemps(){
   var index = Math.floor(Math.random()*rpg_data.durees.length)
@@ -75,16 +76,17 @@ function getTemps(){
 function generateFrondlockPotion() {
     var couleur = getCouleur();
     var niveau = getNiveau();
-    var carac = getCaracteristic();
-    var valeur = getValeur();
+    var carac = getCaracteristique();
+    // var valeur = getValeur();
+    var valeursimple = getValeurSimple();
     var temps = getTemps();
     var effets = getEffets();
     var puissance = getPuissance();
 
-    var potion = "Une potion de " + carac + " " + niveau + " de couleur " + couleur + ". ";
-    var effet = "<p><strong>Effet :</strong> " + effets + " de " + valeur + " de " + carac ;
+    var potion = "Une potion de " + carac + " " + puissance + " de couleur " + couleur + ". ";
+    var effet = "<p><strong>Effet :</strong> " + effets + " de " + valeursimple + " de " + carac ;
     var test = "<p>Puissance de l'effet non random : " + puissance + "</p>";
-    var resultat = potion + effet + " pendant " + temps + "." + test ;
+    var resultat = potion + effet + " pendant " + temps + "." + test;
     return resultat;
 }
 
@@ -98,7 +100,7 @@ function renderFrondlockPotion() {
 }
 // calcul des possibilités pour les potions basiques
 function getNumberOfFrondlockPotions() {
-    combinations = rpg_data.couleurs.length * rpg_data.caracteristics.length * rpg_data.niveaux.length
+    combinations = rpg_data.couleurs.length * rpg_data.caracteristiques.length * rpg_data.niveaux.length
     return combinations
 }
 function setModeFrondlockPotion() {
