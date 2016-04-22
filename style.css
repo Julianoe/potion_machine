@@ -38,7 +38,22 @@
 
 
 body{
-  background: url('img/paper-background.png');
+  /*background: url('img/paper-background.png');*/
+  background: url('img/OldBook2.jpg');
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'uglyquaregular';
+}
+.well{
+  /*background: url('img/OldBook2.jpg');*/
+  background:transparent;
+  background-position:  top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border:none;
+
 }
 
 .potion-button{
@@ -93,7 +108,6 @@ a.potion-button:focus{
 a.potion-button-red:active{
   background-image: url('img/button-active.png');
   color: beige;
-
   text-decoration:none;
 }
 .potion-button-red:hover{
@@ -108,7 +122,6 @@ a.potion-button-red:focus{
   outline:none;
   color:beige;
   text-decoration:none;
-
 }
 .immortalregular{
   font-family: 'immortalregular';
