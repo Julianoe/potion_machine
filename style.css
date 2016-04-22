@@ -39,8 +39,19 @@
 
 body{
   /*background: url('img/paper-background.png');*/
-  background: url('img/OldBook2.jpg');
+  background: url('img/OldBook2-half.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  
+
+}
+
+@media (min-width: 992px) {
+  body{
+    background: url('img/OldBook2.jpg');
+    background-size: cover;
+
+  }
 }
 
 h1 {
