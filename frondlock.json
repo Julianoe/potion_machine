@@ -7,8 +7,8 @@
             "minute"
         ],
         "effets": [
-          "Bonus",
-          "Malus"
+          "bonus",
+          "malus"
         ],
         "caracteristiques": [
             "charisme",
