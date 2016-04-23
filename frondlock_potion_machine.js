@@ -84,7 +84,7 @@ function generateFrondlockPotion() {
     var puissance = getPuissance();
 
     var potion = "Une potion de " + carac + " <strong>" + puissance + "</strong> de couleur " + couleur + ". ";
-    var effet = "<p><strong>Effet :</strong> " + effets + " de " + valeursimple + " de " + carac ;
+    var effet = "<strong>Effet :</strong> " + effets + " de " + valeursimple + " de " + carac ;
     var resultat = potion + effet + " pendant " + temps + ".";
     return resultat;
 }
