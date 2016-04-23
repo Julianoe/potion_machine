@@ -42,10 +42,10 @@ body{
   background: url('img/OldBook2-half.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  
-
+  padding:20px;
+  color:#262626;
 }
-
+/*media query for large screens*/
 @media (min-width: 992px) {
   body{
     background: url('img/OldBook2.jpg');
