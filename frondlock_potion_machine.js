@@ -17,11 +17,6 @@ function getCaracteristique() {
   var caracteristique = rpg_data.caracteristiques[index];
   return caracteristique;
 }
-// function getNiveau(){
-//   var index = Math.floor(Math.random()*rpg_data.niveaux.length)
-//   var niveau = rpg_data.niveaux[index];
-//   return niveau;
-// }
 function getPuissance(){
   var niveau = rpg_data.niveaux
   var raretee = rpg_data.niveauxPoids
@@ -95,7 +90,6 @@ function renderTitlePotion() {
 // mon générateur de potion
 function generateFrondlockPotion() {
     var couleur = getCouleur();
-    // var niveau = getNiveau();
     // var carac = "force";
     var carac = getCaracteristique();
     // var valeur = getValeur();
