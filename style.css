@@ -101,8 +101,9 @@ a.potion-button:focus{
 
 
 .potion-button-red{
-  background-image: url('img/button.png');
+  background-image: url('img/button-sprite.png');
   background-repeat: no-repeat;
+  background-position: center;
   display: block;
   height:86px;
   margin:0 auto;
@@ -114,15 +115,18 @@ a.potion-button:focus{
   text-transform: uppercase;
 }
 .potion-button-red:target{
-  background-image: url('img/button-active.png');
+  background-position: bottom;
+
 }
 a.potion-button-red:active{
-  background-image: url('img/button-active.png');
   color: beige;
   text-decoration:none;
+  background-position: bottom;
+
 }
 .potion-button-red:hover{
-  background-image: url('img/button-hover.png');
+  background-position: top;
+
 }
 a.potion-button-red:hover{
   color: beige;
