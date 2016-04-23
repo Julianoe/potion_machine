@@ -22,7 +22,7 @@
 
 }
 
-@font-face {
+/*@font-face {
     font-family: 'immortalregular';
     src: url('fonts/immortal-webfont.eot');
     src: url('fonts/immortal-webfont.eot?#iefix') format('embedded-opentype'),
@@ -31,28 +31,53 @@
          url('fonts/immortal-webfont.svg#immortalregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
-}
+}*/
 
 
 
 
 body{
   /*background: url('img/paper-background.png');*/
-  background: url('img/OldBook2-half.jpg');
+  background: url('img/OldBook2-half.jpg') no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: cover;
   padding:20px;
+  padding-top:2em;
   color:#262626;
+  font-size:3em;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li{
+  font-family: serif;
 }
 /*media query for large screens*/
 @media (min-width: 992px) {
   body{
-    background: url('img/OldBook2.jpg');
+    background: url("img/OldBook2.jpg") no-repeat center center fixed;
     background-size: cover;
 
   }
 }
+
+.row{
+   /*background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/washington.jpg") no-repeat center center fixed;*/
+    background-size: cover;
+}
+
+.bg-blend {
+  position:fixed;
+  /*background: url('img/skull2.jpg');*/
+  /*-moz-mix-blend-mode: darken;*/
+  width:200px;
+  height:250px;
+  /*background-size: cover;*/
+  /*background-color: #002B65;*/
+
+  background-image: url("img/skull2.jpg");
+  color: white;
+  background-size: cover;
+  mix-blend-mode: darken;
+}
+
 
 h1 {
   font-family: 'uglyquaregular';
@@ -122,7 +147,6 @@ a.potion-button-red:active{
   color: beige;
   text-decoration:none;
   background-position: bottom;
-
 }
 .potion-button-red:hover{
   background-position: top;
@@ -138,12 +162,12 @@ a.potion-button-red:focus{
   color:beige;
   text-decoration:none;
 }
-.immortalregular{
+/*.immortalregular{
   font-family: 'immortalregular';
-}
-
+}*/
 .uglyquaregular{
   font-family: 'uglyquaregular';
+  font-size:1em;
   letter-spacing: 1px;
   text-shadow: 2px 2px 2px black;
 }

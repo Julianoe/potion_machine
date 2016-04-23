@@ -84,12 +84,10 @@ function generateFrondlockPotion() {
     var puissance = getPuissance();
 
     var potion = "Une potion de " + carac + " <strong>" + puissance + "</strong> de couleur " + couleur + ". ";
-    var effet = "<strong>Effet :</strong> " + effets + " de " + valeursimple + " de " + carac ;
+    var effet = "<br><br><br><br><strong>Effet :</strong> " + effets + " de " + valeursimple + " de " + carac ;
     var resultat = potion + effet + " pendant " + temps + ".";
     return resultat;
 }
-
-
 
 // envoi de la potion Frondlock dans le fichier html
 function renderFrondlockPotion() {
@@ -100,7 +98,7 @@ function renderFrondlockPotion() {
 // calcul des possibilités pour les potions basiques
 function getNumberOfFrondlockPotions() {
     combinations = rpg_data.couleurs.length * rpg_data.caracteristiques.length * rpg_data.niveaux.length
-    return combinations
+    return combinations;
 }
 function setModeFrondlockPotion() {
     var combinations = getNumberOfFrondlockPotions()
@@ -114,8 +112,6 @@ function setModeFrondlockPotion() {
     $( "#switch_mode_button" ).click(function() {
         setModeBasicPotion();
     });
-
-
 }
 
 
