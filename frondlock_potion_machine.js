@@ -90,16 +90,10 @@ function renderTitlePotion() {
 // mon générateur de potion
 function generateFrondlockPotion() {
     var couleur = getCouleur();
-    // var carac = "force";
     var carac = getCaracteristique();
-    // var valeur = getValeur();
     var valeursimple = getValeurSimple();
     var temps = getTemps();
-
-
-
     var effets = getEffets();
-    // var puissance = "mythique";
     var puissance = getPuissance();
 
     // if (puissance == 'mythique' & carac == 'force'){
