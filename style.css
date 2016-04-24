@@ -233,28 +233,39 @@ input[type='radio'], input[type='checkbox'] {
     cursor: pointer;
     padding-top:22px;
 }
+input[type='radio']{
+
+}
 input[type='radio'] + label, input[type='checkbox'] + label {
   margin: 0;
-    margin-left:-18px;
-    clear: none;
-    padding: 5px 0 4px 24px;
-    background: url(img/checkbox-unchk-std.png) left center no-repeat;
+  margin-left:-18px;
+  clear: none;
+  padding: 5px 0 4px 24px;
 }
-input[type='radio']:checked + label {
-    background-image: url(img/checkbox-chk-std.png);
+/* UNCHEKED */
+input[type='radio'] + label{
+  background: url(img/radioshadow-unchk-std.png) left center no-repeat;
 }
-input[type='checkbox']:checked + label {
-    background-image: url(img/checkbox-chk-std.png);
-}
-input[type='checkbox']:checked:disabled + label {
-  background-image: url(img/checkbox-chk-dsbld.png);
-}
-input[type='checkbox']:disabled + label {
-  background-image: url(img/checkbox-unchk-dsbld.png);
+input[type='checkbox'] + label{
+  background: url(img/checkbox-unchk-std.png) left center no-repeat;
 }
 input[type='checkbox']:hover + label {
   background-image: url(img/checkbox-unchk-hvr.png);
 }
+input[type='checkbox']:disabled + label {
+  background-image: url(img/checkbox-unchk-dsbld.png);
+}
+
+/* CHECKED*/
+input[type='radio']:checked + label {
+  background: url(img/radioshadow-chk-std.png) left center no-repeat;
+}
+input[type='checkbox']:checked + label {
+    background-image: url(img/checkbox-chk-std.png);
+}
 input[type='checkbox']:checked:hover + label {
   background-image: url(img/checkbox-chk-hvr.png);
+}
+input[type='checkbox']:checked:disabled + label {
+  background-image: url(img/checkbox-chk-dsbld.png);
 }

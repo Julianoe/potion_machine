@@ -19,7 +19,7 @@
     <link href="style.css" rel="stylesheet">
     <style>
         #potion_well {
-            height: 260px;
+            height: 200px;
         }
 
         #potion_well h3 {
@@ -43,17 +43,19 @@
                 </div>
                 <br>
 
-                <span>
-                  <input type="checkbox" name="lecheckbonus" id="check_bonus" class="checkbox" unchecked="">
-                  <label for="lecheckbonus"> Que des bonus ? </label>
-                </span>
-                <br>
-                <span>
-                  <input type="checkbox" name="lecheckmalus" id="check_malus" class="checkbox">
-                  <label for="lecheckmalus"> Que des malus ? </label>
-                </span>
+                    <form>
+                        <input group="effets" type="radio" name="effets" id="check_all" class="checkbox" checked>
+                        <label for="check_all"> Bonus & Malus</label>
 
+                      <br>
+                        <input group="effets" type="radio" name="effets" id="check_bonus" class="checkbox">
+                        <label for="check_bonus"> Que des bonus </label>
 
+                      <br>
+                        <input group="effets" type="radio" name="effets" id="check_malus" class="checkbox">
+                        <label for="check_malus"> Que des malus </label>
+
+                    </form>
                 <p class="text-center">
                   <!-- <a class="btn btn-primary btn-lg" id="potion_button" href="#" role="button">Générer potion</a> -->
                   <a class="potion-button-red uglyquaregular" id="potion_button" href="#" role="button">Generer</a>
@@ -69,6 +71,42 @@
             </div>
 
             <div class="col-md-5">
+              <h3>Puissances</h3>
+
+              <span>
+                <input type="checkbox" name="checkmythique" id="check_mythique" class="checkbox">
+                <label for="checkmythique"> Mythique </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="checkpuissante" id="check_puissante" class="checkbox">
+                <label for="checkpuissante"> Puissance </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="checkmajeure" id="check_majeure" class="checkbox" checked>
+                <label for="checkmajeure"> Majeure </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="checkintermediaire" id="check_intermediaire" class="checkbox">
+                <label for="checkintermediaire"> Intermédiaire </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="checkstandard" id="check_standard" class="checkbox">
+                <label for="checkstandard"> Standard </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="checkfaible" id="check_faible" class="checkbox" checked>
+                <label for="checkfaible"> Faible </label>
+              </span>
+              <br>
+              <span>
+                <input type="checkbox" name="lecheckminime" id="check_minime" class="checkbox" checked>
+                <label for="checkminime"> Minime </label>
+              </span>
               <!-- <h3><span style="text-transform:capitalize;" id="nom_potion"></span></h3> -->
               <!-- <ul>
                 <li>Puissance : <span id="puissance_potion"></span></li>
@@ -76,6 +114,14 @@
                 <li>Effet : <span id="effet_potion"></span></li>
 
               </ul> -->
+
+              <!-- <form name="myform" action="http://www.mydomain.com/myformhandler.cgi" method="POST"> -->
+              <!-- <input type="radio" name="group1" value="Toutes"> Toutes<br>
+              <input type="radio" name="group1" value="Mythique"> Mythique<br>
+              <input type="radio" name="group1" value="Butter" checked> Butter<br>
+              <input type="radio" name="group1" value="Cheese"> Cheese -->
+              <!-- </form> -->
+
               <div class="bg-blend"></div>
               <!-- <img class="image-skull bg-blend" src="img/skull2.jpg"> -->
 

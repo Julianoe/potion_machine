@@ -32,14 +32,27 @@
         ],
         "niveauxPoids": [
             "5",
-            "10",
-            "15",
-            "20",
-            "20",
-            "15",
-            "15"
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
         ],
         "couleurs": [
+          "rouge",
+          "bleue",
+          "verte",
+          "jaune",
+          "grise",
+          "noire",
+          "orange",
+          "violet",
+          "rose",
+          "blanc",
+          "transparente"
+        ],
+        "couleursHARDCORE": [
           "abricot",
           "absinthe",
           "acajou",
