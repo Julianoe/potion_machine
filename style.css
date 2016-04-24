@@ -38,7 +38,7 @@
 
 body{
   /*background: url('img/paper-background.png');*/
-  background: url('img/OldBook2-half.jpg') no-repeat center center fixed;
+  background: url('img/OldBook2-half-compressed.jpg') no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: cover;
   padding:20px;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li{
 /*media query for large screens*/
 @media (min-width: 992px) {
   body{
-    background: url("img/OldBook2-drawn.jpg") no-repeat center center fixed;
+    background: url("img/OldBook2-drawn-compressed.jpg") no-repeat center center fixed;
     background-size: cover;
 
   }
