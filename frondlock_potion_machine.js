@@ -240,7 +240,7 @@ function setModeFrondlockPotion() {
     var combinations = getNumberOfFrondlockPotions()
     renderFrondlockPotion()
     // renderTitlePotion();
-    $("#potion_mode").text("Frondlock Potion Mode");
+    $("#potion_mode").text("Le Grimoire à Potions");
     $("#switch_mode_button").text("Switch to Basic Mode");
     $("#potion_combinations").text(numeral(combinations).format('0,0'));
     $( "#potion_button" ).click(function() {
