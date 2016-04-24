@@ -8,11 +8,11 @@ L'objectif de ce projet est de produire une série d'outils et de générateurs 
 
 
 ## Credits
-
-### Julianoe
+* [Lamoot](http://opengameart.org/users/lamoot) et son RPG GUI (CC 3.0)
+* [StumpuStrust](http://opengameart.org/users/stumpystrust) et son bouton de toute beauté (CC 0)
 * [@Julianoe_](https://twitter.com/julianoe_)
 * [Mon site](http://julien.gasbayet.fr)
 
-#### Jason Rigden
+#### Jason Rigden, auteur du projet _Miraculous Potion Machine_
 * [@mr_rigden](https://twitter.com/mr_rigden)
 * [Mr. Rigden's Blog ](https://jason.rigden.us)
