@@ -80,12 +80,12 @@ function generateName(){
   // echo(puissance);
 }
 //envoi du nom de la potion dans le fichier html
-function renderTitlePotion() {
-  var titre = generateName() ;
-  $("#nom_potion").html(titre);
-  ga('send', 'event', 'PotionMachine', 'click', 'FrondlockPotion()');
+// function renderTitlePotion() {
+//   var titre = generateName() ;
+//   $("#nom_potion").html(titre);
+//   ga('send', 'event', 'PotionMachine', 'click', 'FrondlockPotion()');
 
-}
+// }
 
 // mon générateur de potion
 function generateFrondlockPotion() {
@@ -93,7 +93,7 @@ function generateFrondlockPotion() {
     var carac = getCaracteristique();
     var valeursimple = getValeurSimple();
     var temps = getTemps();
-    var effets = getEffets();
+    // var effets = getEffets();
     var puissance = getPuissance();
 
     // if (puissance == 'mythique' & carac == 'force'){
@@ -102,6 +102,27 @@ function generateFrondlockPotion() {
     // else{
     //   var name = "Potion classique<br><br>";
     // }
+
+
+    // tester les checkbox
+      // quel est le
+      var bonuschecked = document.getElementById("check_bonus").checked;
+      var maluschecked = document.getElementById("check_malus").checked;
+      if (maluschecked && bonuschecked){
+        var effets = getEffets();
+      }
+      else if ( maluschecked && bonuschecked==false ){
+        effets = "malus";
+      }
+      else if ( bonuschecked && maluschecked==false ){
+        effets = "bonus";
+      }
+      else if ( bonuschecked == false && maluschecked == false ) {
+        var effets = getEffets();
+      }
+
+
+
 
       if(effets == "bonus" ){
         var operande = "+";
@@ -137,7 +158,7 @@ function generateFrondlockPotion() {
     var effet = "<br><br><strong>Effet :</strong> " + operande   + valeur + " de " + carac ;
     var resultat = name + potion + effet + " pendant " + temps + ".";
 
-    generateName();
+    // generateName();
 
     return resultat;
 }
@@ -160,18 +181,22 @@ function getNumberOfFrondlockPotions() {
 function setModeFrondlockPotion() {
     var combinations = getNumberOfFrondlockPotions()
     renderFrondlockPotion()
-    renderTitlePotion();
+    // renderTitlePotion();
     $("#potion_mode").text("Frondlock Potion Mode");
     $("#switch_mode_button").text("Switch to Basic Mode");
     $("#potion_combinations").text(numeral(combinations).format('0,0'));
     $( "#potion_button" ).click(function() {
         renderFrondlockPotion();
-        renderTitlePotion();
+        // renderTitlePotion();
     });
     $( "#switch_mode_button" ).click(function() {
         setModeBasicPotion();
     });
 }
+
+
+
+
 
 
 $( document ).ready(function() {

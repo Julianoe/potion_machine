@@ -44,7 +44,7 @@ body{
   padding:20px;
   padding-top:2em;
   color:#262626;
-  font-size:3em;
+  font-family:serif;
 }
 h1, h2, h3, h4, h5, h6, p, ul, li{
   font-family: serif;
@@ -185,7 +185,7 @@ a.potion-button-red:focus{
 
 */
 /*li:not(#foo) > fieldset > div > span > input[type='radio'],*/
-li:not(#foo) > fieldset > div > span > input[type='checkbox'] {
+li:not(.checkbox) > fieldset > div > span > input[type='checkbox'] {
 
     /* Hide the input, but have it still be clickable */
     opacity: 0;
@@ -196,7 +196,7 @@ li:not(#foo) > fieldset > div > span > input[type='checkbox'] {
 
 
 /*li:not(#foo) > fieldset > div > span > input[type='radio'] + label,*/
-li:not(#foo) > fieldset > div > span > input[type='checkbox'] + label {
+li:not(.checkbox) > fieldset > div > span > input[type='checkbox'] + label {
     margin: 0;
     clear: none;
 
@@ -215,7 +215,7 @@ li:not(#foo) > fieldset > div > span > input[type='checkbox'] + label {
 /*li:not(#foo) > fieldset > div > span > input[type='radio']:checked + label {
     background-image: url(radio.png);
 }*/
-li:not(#foo) > fieldset > div > span > input[type='checkbox']:checked + label {
+li:not(.checkbox) > fieldset > div > span > input[type='checkbox']:checked + label {
     background-image: url(checkbox-chk-std.png);
 }
 
@@ -226,30 +226,35 @@ li:not(#foo) > fieldset > div > span > input[type='checkbox']:checked + label {
 /*////////////////////////////////////////////////////////////*/
 
 input[type='radio'], input[type='checkbox'] {
-
     opacity: 0;
     float: left;
     width: 18px;
     height:18px;
     cursor: pointer;
-    margin-top:20px;
+    padding-top:22px;
 }
-
-
 input[type='radio'] + label, input[type='checkbox'] + label {
-
-margin: 0;
+  margin: 0;
     margin-left:-18px;
     clear: none;
     padding: 5px 0 4px 24px;
     background: url(img/checkbox-unchk-std.png) left center no-repeat;
 }
-
-
 input[type='radio']:checked + label {
     background-image: url(img/checkbox-chk-std.png);
 }
-
 input[type='checkbox']:checked + label {
     background-image: url(img/checkbox-chk-std.png);
+}
+input[type='checkbox']:checked:disabled + label {
+  background-image: url(img/checkbox-chk-dsbld.png);
+}
+input[type='checkbox']:disabled + label {
+  background-image: url(img/checkbox-unchk-dsbld.png);
+}
+input[type='checkbox']:hover + label {
+  background-image: url(img/checkbox-unchk-hvr.png);
+}
+input[type='checkbox']:checked:hover + label {
+  background-image: url(img/checkbox-chk-hvr.png);
 }
